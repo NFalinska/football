@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="teams col-md-6">
+            <div class="team row">
+                <label class="col-md-6">Team:</label>
+                <select [(ngModel)]="teamSelected" (change)="onChanged()" class="answer col-md-6">
+                    <option value="0">Please select</option>
+                    <option *ngFor="let team of teams" [value]="team.id">
+                        {{team.teamName}}
+                    </option>
+                </select>
+            </div>
+            <div class="rate row">
+                <div class="col-md-6"> Rate:</div>
+                <div *ngIf="index != null" class="answer col-md-6">{{teams[index].rate}}</div>
+            </div>
+            <div class="uefa row">
+                <div class="col-md-6">Plays in UEFA: </div>
+                <div *ngIf="index != null" class="answer col-md-6"> {{teams[index].inUefaLeague ? 'Yes' : 'No'}}
+                </div>
+            </div>
+        </div>
+        <div *ngIf="index != null" class="country col-md-6">
+            <app-country-comp [code]="countryCode"></app-country-comp>
+        </div>
+    </div>
+</div>

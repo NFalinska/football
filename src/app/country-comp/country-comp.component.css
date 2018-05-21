@@ -1,0 +1,13 @@
+.pic {
+    margin-top: 15px;
+}
+
+.name {
+    font-weight: bolder;
+    margin-left: 40px;
+}
+
+.countries_info{
+    display: flex;
+    justify-content: flex-start;
+}

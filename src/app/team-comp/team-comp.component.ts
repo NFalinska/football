@@ -9,7 +9,7 @@ import { TeamService }       from "./team.service";
 })
 export class TeamCompComponent implements OnInit {
   teams: Team[];
-  teamSelected;
+  teamSelected = 0;
   index = null;
   countryCode: string;
   
